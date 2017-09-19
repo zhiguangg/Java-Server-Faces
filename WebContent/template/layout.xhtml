@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      
+  <h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <h:outputStylesheet name="css/default.css"/>
+    <h:outputStylesheet name="css/cssLayout.css"/>
+    <!-- conditionally load section specific css files -->
+    <h:outputStylesheet name="#{title eq false ? 'css/dummy.css' : 'css/title.css'}" />
+    <h:outputStylesheet name="#{loginsearch eq false ? 'css/dummy.css' : 'css/loginsearch.css'}" />
+    <h:outputStylesheet name="#{login eq false ? 'css/dummy.css' : 'css/login.css'}" />
+    <h:outputStylesheet name="#{search eq false ? 'css/dummy.css' : 'css/search.css'}" />
+    <h:outputStylesheet name="#{logo eq false ? 'css/dummy.css' : 'css/logo.css'}" />
+    <h:outputStylesheet name="#{menu eq false ? 'css/dummy.css' : 'css/menu.css'}" />
+    <h:outputStylesheet name="#{left eq false ? 'css/dummy.css' : 'css/left.css'}" />
+    <h:outputStylesheet name="#{right eq false ? 'css/dummy.css' : 'css/right.css'}" />
+    <h:outputStylesheet name="#{bottom eq false ? 'css/dummy.css' : 'css/bottom.css'}" />
+    <title>My Template</title>
+  </h:head>
+  <h:body>
+    <div class="wrapper" style="width: #{empty wrapperwidth ? '100%' : 'wrapperwidth'}">
+      <ui:fragment rendered="#{empty title ? true : title}">
+        <div id="title">
+          <ui:insert name="title">
+            <ui:include src="/template/default/title.xhtml"/>
+          </ui:insert>
+        </div>
+      </ui:fragment>
+      <ui:fragment rendered="#{empty loginsearch ? true : loginsearch}">
+        <ui:fragment rendered="#{empty login ? true : login}">
+          <div id="login">
+            <ui:insert name="login">
+              <ui:include src="/template/default/login.xhtml"/>
+            </ui:insert>
+          </div>
+        </ui:fragment>
+        <ui:fragment rendered="#{empty search ? true : search}">
+          <div id="search">
+            <ui:insert name="search">
+              <ui:include src="/template/default/search.xhtml"/>
+            </ui:insert>
+          </div>
+        </ui:fragment>
+      </ui:fragment>
+	  <ui:fragment rendered="#{empty logotop ? true : logotop}">
+        <ui:fragment rendered="#{empty logo ? true : logo}">
+          <div id="logo">
+            <ui:insert name="logo">
+              <ui:include src="/template/default/logo.xhtml"/>
+            </ui:insert>
+          </div>
+        </ui:fragment>
+        <ui:fragment rendered="#{empty top ? true : top}">
+          <div id="top">
+            <ui:insert name="top">
+              <ui:include src="/template/default/top.xhtml"/>
+            </ui:insert>
+          </div>
+        </ui:fragment>
+      </ui:fragment>
+      <ui:fragment rendered="#{empty menu ? true : menu}">
+        <div id="menu">
+          <ui:insert name="menu">
+            <ui:include src="/template/default/menu.xhtml"/>
+          </ui:insert>
+        </div>
+      </ui:fragment>
+      <ui:fragment rendered="#{empty main ? true : main}">
+        <ui:fragment rendered="#{empty left ? true : left}">
+          <div id="left">
+            <ui:insert name="left">
+              <ui:include src="/template/default/left.xhtml"/>
+            </ui:insert>
+          </div>
+        </ui:fragment>
+        <ui:fragment rendered="#{empty content ? true : content}">
+          <div id="content">
+            <ui:insert name="content">
+              <ui:include src="/template/default/content.xhtml"/>
+            </ui:insert>
+          </div>
+        </ui:fragment>
+        <ui:fragment rendered="#{empty right ? true : right}">
+          <div id="right">
+            <ui:insert name="right">
+              <ui:include src="/template/default/right.xhtml"/>
+            </ui:insert>
+          </div>
+        </ui:fragment>
+      </ui:fragment>
+      <ui:fragment rendered="#{empty bottom ? true : bottom}">
+        <div id="bottom">
+          <ui:insert name="bottom">
+            <ui:include src="/template/default/bottom.xhtml"/>
+          </ui:insert>
+        </div>
+      </ui:fragment>
+    </div>
+    
+  </h:body>
+</html>
