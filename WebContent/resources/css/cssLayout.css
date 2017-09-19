@@ -2,17 +2,21 @@
 #title {
 	width: 99%;
 	text-align: center;
+	text-shadow: 2px 2px red;
 }
 
 #login, #search {
 	border: 1px solid lightgrey;
+	max-height: 80px;
 }
 
 #login {
+	background-color: #FFFFF0;
 	clear: both;
 	float: left;
-	width: 50%;
+	width: 100%;
 	height: 80px;
+	fond-size: 30px;
 }
 
 #search {
@@ -25,26 +29,30 @@
 }
 
 #logo {
+	background-color: lightpurple;
 	clear: both;
 	float: left;
 	width: 20%;
 }
 
 #top {
-	width: 59.5%;
+	background-color: lightblue;
+	width: 79.5%;
 	float: left;
+	height: 230px;
 }
 
 #menu {
 	clear: both;
 	border: 1px solid lightgrey;
-	background-color: green;
+	background-color: lightgreen;
 	font-size: 24px;
 	font-weight: bold;
 	text-align: left;
 }
 
 #left, #content {
+	background-color: #FFFFF6;
 	float: left;
 	border: 1px solid lightgrey;
 	min-height: 300px;
@@ -62,4 +70,7 @@
 	color: white;
 	border: 1px solid white;
 	background-color: black;
+}
+#labelUserName {
+	font-size: 30px;
 }

@@ -9,12 +9,12 @@
   </h:head>
   <h:body>
 	<ui:composition>
-	  <h:form>
+	  <h:form id="myLogin">
 	    <h:outputLabel id="labelUserName" value="User Name: " />
-	    <h:inputText name="input">
-	    </h:inputText>
+	    <h:inputText name="input"></h:inputText>
 	    <h:outputLabel id="labelPassword" value="Password: " />
 	    <h:inputText value="" placeholder="username" />
+	    <h:commandButton id="labelSubmit" value="submit" action="#"/>
 	  </h:form>
 	</ui:composition>
   </h:body>
